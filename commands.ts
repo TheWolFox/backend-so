@@ -239,6 +239,12 @@ export class Commands{
         })
     }
 
+    getCommand(command){
+        return this.runCommand(command.toString()).then(out => {
+            return out;
+        })
+    }
+
     streamToString (stream):Promise<string> {
         const chunks = [];
         return new Promise((resolve, reject) => {
